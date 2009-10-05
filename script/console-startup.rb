@@ -1,0 +1,1 @@
+SOLVE360_CONFIG_PATH = File.join(File.dirname(__FILE__), '..', 'spec', 'api_settings.yml')
