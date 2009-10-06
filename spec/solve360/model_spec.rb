@@ -6,6 +6,12 @@ class Person < Solve360::Model
   end
 end
 
+describe "A Solve360 model" do
+  it "should determine model name" do
+    Person.resource_name.should == "people"
+  end
+end
+
 describe "Field mapping" do
   before do
     Person.fields do 
@@ -34,5 +40,16 @@ describe "Field mapping" do
     @person.attributes["Description"] = "A description"
     
     @person.map_attributes["custom_description"].should == "A description"
+  end
+end
+
+describe "Creating a record" do
+  before do
+    stub_http_response_with("contacts/create-success.json")
+    @response = Person.create("First Name" => "Steve", "Description" => "Web Developer")
+  end
+  
+  it "should be valid" do
+    @response["response"]["status"].should == "success"
   end
 end
