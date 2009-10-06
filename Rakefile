@@ -9,6 +9,7 @@ begin
     gemspec.homepage = "http://github.com/curve21/solve360"
     gemspec.description = ""
     gemspec.authors = ["Stephen Bartholomew"]
+    gemspec.files =  FileList["[A-Z]*", "{lib,spec}/**/*"]
   end
 rescue LoadError
   puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"

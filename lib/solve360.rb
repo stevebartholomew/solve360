@@ -1,5 +1,5 @@
 require "httparty"
-require "configatron"
+require "configify"
 require "active_support/inflector"
 require "active_support/core_ext/hash"
 
