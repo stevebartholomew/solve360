@@ -12,6 +12,20 @@ describe "A Solve360 model" do
   it "should determine model name" do
     Person.resource_name.should == "people"
   end
+  
+  context "more than one model" do
+    it "should not pollute fields" do
+      class Car
+        include Solve360::Model
+        fields do
+          { "Doors" => "doors" }
+        end
+      end
+      
+      Car.fields.keys.include?("Job Title").should be_false
+      Person.fields.keys.include?("Doors").should be_false
+    end
+  end
 end
 
 describe "Field mapping" do
@@ -55,24 +69,24 @@ describe "Creating a record" do
   context "directly from create" do
     before do
       stub_http_response_with("contacts/create-success.json")
-      @person = Person.create("First Name" => "Catherine")
+      @contact = Solve360::Contact.create("First Name" => "Catherine")
     end
   
     it "should be valid" do
-      @person.attributes["First Name"].should == "Catherine"
-      @person.id.should == 12345
+      @contact.attributes["First Name"].should == "Catherine"
+      @contact.id.should == 12345
     end
   end
   
   context "creating a new object then saving" do
     before do
       stub_http_response_with("contacts/create-success.json")
-      @person = Person.new("First Name" => "Catherine")
-      @person.save
+      @contact = Solve360::Contact.new("First Name" => "Catherine")
+      @contact.save
     end
     
     it "should be valid" do
-      @person.id.should == 12345
+      @contact.id.should == 12345
     end
   end
 end
@@ -81,25 +95,25 @@ describe "Finding a record" do
   context "Successfully" do
     before do
       stub_http_response_with("contacts/find-success.json")
-      @person = Person.find(12345)
+      @contact = Solve360::Contact.find(12345)
     end
   
     it "should find existing user" do
-      @person.attributes["First Name"].should == "Henry"
-      @person.id.should == 12345
+      @contact.attributes["First Name"].should == "Henry"
+      @contact.id.should == 12345
     end
   end
 end
 
 describe "Updating a record" do
   before do
-    @person = Person.new("First Name" => "Steve")
-    @person.id = 12345
+    @contact = Solve360::Contact.new("First Name" => "Steve")
+    @contact.id = 12345
     
     stub_http_response_with("contacts/update-success.json")
     
-    @person.attributes["First Name"] = "Steve"
-    @response = @person.save
+    @contact.attributes["First Name"] = "Steve"
+    @response = @contact.save
   end
   
   it "should be valid" do
