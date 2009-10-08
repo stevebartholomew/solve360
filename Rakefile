@@ -23,6 +23,11 @@ Spec::Rake::SpecTask.new(:spec) do |spec|
   spec.spec_opts = ['--options', 'spec/spec.opts']
 end
 
-YARD::Rake::YardocTask.new do |t|
-  t.files   = ["lib/**/*.rb"]
+begin
+  require "yard"
+  YARD::Rake::YardocTask.new do |t|
+    t.files   = ["lib/**/*.rb"]
+  end
+rescue LoadError
+  puts "You'll need yard to generate documentation: gem install yard"
 end
