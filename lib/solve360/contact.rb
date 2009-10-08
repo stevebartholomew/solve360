@@ -1,5 +1,5 @@
 module Solve360
-  class Contact < Solve360::Model
+  class Contact < Solve360::Base
     fields do 
       {"Archived" => "archive",
       "Assigned To" => "assignedto",

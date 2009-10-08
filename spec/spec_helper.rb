@@ -1,8 +1,8 @@
 require 'rubygems'
 
-SOLVE360_CONFIG_PATH = File.join(File.dirname(__FILE__), 'api_settings.yml')
-
 require File.join(File.dirname(__FILE__), '..', 'lib', 'solve360')
+
+Solve360::Base.configure YAML::load(File.read(File.join(File.dirname(__FILE__), 'api_settings.yml')))
 
 def file_fixture(filename)
   open(File.join(File.dirname(__FILE__), 'fixtures', "#{filename.to_s}")).read

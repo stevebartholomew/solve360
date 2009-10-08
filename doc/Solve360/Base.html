@@ -1,0 +1,1070 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="../style.css" type="text/css" charset="utf-8" />
+<link rel="stylesheet" href="../custom.css" type="text/css" charset="utf-8" />
+<link rel="stylesheet" href="../syntax_highlight.css" type="text/css" charset="utf-8" />
+
+    <script src="../jquery.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../app.js" type="text/javascript" charset="utf-8"></script>
+    <title>Class: Solve360::Base</title>
+  </head>
+  <body>
+    <div id="content">
+      <div class="section class Solve360_Base">
+  <h1 class="title">Class: Solve360::Base</h1>
+  <div class="section mixins">
+  <h1>Included Modules</h1>
+  <p>HTTParty, Configify::Config</p>
+</div>
+<div class="section attributes">
+  <h1>Attributes</h1>
+
+  
+    <div class="instance">
+      <h2>Instance Attributes</h2>
+      <table>
+      
+        
+        <tr class="">
+          <th class='signature'>
+            <span class='name'>attributes</span>
+          </td>
+          <td class="readwrite">
+            [<span id='attributes-instance_method'>R</span><span id='attributes=-instance_method'>W</span>] 
+          </td>
+          <td class="visibility">
+            public
+          </td>
+          <td class="docstring">
+            <p>
+Sets the attribute <tt>attributes</tt>.
+</p>
+
+            
+          </td>
+        </tr>
+        
+      
+        
+        <tr class="">
+          <th class='signature'>
+            <span class='name'>id</span>
+          </td>
+          <td class="readwrite">
+            [<span id='id-instance_method'>R</span><span id='id=-instance_method'>W</span>] 
+          </td>
+          <td class="visibility">
+            public
+          </td>
+          <td class="docstring">
+            <p>
+Sets the attribute <tt>id</tt>.
+</p>
+
+            
+          </td>
+        </tr>
+        
+      
+      </table>
+    </div>
+  
+</div>
+<div class="section constants">
+  
+</div><div class="section constructor">
+<h1>Constructor Summary</h1>
+  <div id="initialize-instance_method" class="section method">
+  <div class="details_title">
+    <div class='section methodsignature'>
+    <tt class='def'>
+      <span class='visibility'>public</span>
+      <span class='return_types'></span>
+      <span class='name'>initialize</span><span class='args'>(attributes = {})</span>
+      <span class='block'></span>
+    </tt>
+  </div>
+
+</div><div class="section source">
+  <span>[<a class="source_link" href="#">View source</a>]</span>
+  <div class="source_code">
+    <table>
+      <tr>
+        <td>
+          <pre class="lines">
+
+
+8
+9
+10
+11</pre>
+        </td>
+        <td>
+          <pre class="code"><span class="info file"># File 'lib/solve360/base.rb', line 8</span>
+
+<span class='def def kw'>def</span> <span class='initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='attributes identifier id'>attributes</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='attributes identifier id'>attributes</span> <span class='assign token'>=</span> <span class='attributes identifier id'>attributes</span>
+  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='id identifier id'>id</span> <span class='assign token'>=</span> <span class='nil nil kw'>nil</span>
+<span class='end end kw'>end</span>
+</pre>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>
+</div>  <div class="section visibilitygroup public">
+    <h1>Public Visibility</h1>
+      <div class="section methodsummary class public">
+    <h1>Public Class Method Summary</h1>
+<table class="summary">
+  
+    <tr>
+      <th class="signature">
+        
+          <span class='overload'>
+            <span class='name'><a href="#construct_record_from_response-class_method" title="construct_record_from_response">construct_record_from_response</a></span><span class='args'>(response)</span>
+            <span class='block'></span>
+          </span>
+        
+        
+      </th>
+      <td class="docstring">
+        
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <th class="signature">
+        
+          <span class='overload'>
+            <span class='name'><a href="#create-class_method" title="create">create</a></span><span class='args'>(attributes)</span>
+            <span class='block'></span>
+          </span>
+        
+        
+      </th>
+      <td class="docstring">
+        <p>
+Create a record in the API.
+</p>
+
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <th class="signature">
+        
+          <span class='overload'>
+            <span class='name'><a href="#fields-class_method" title="fields">fields</a></span><span class='args'>(&amp;block)</span>
+            <span class='block'></span>
+          </span>
+        
+        
+      </th>
+      <td class="docstring">
+        
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <th class="signature">
+        
+          <span class='overload'>
+            <span class='name'><a href="#find-class_method" title="find">find</a></span><span class='args'>(id)</span>
+            <span class='block'></span>
+          </span>
+        
+        
+      </th>
+      <td class="docstring">
+        <p>
+Find a record.
+</p>
+
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <th class="signature">
+        
+          <span class='overload'>
+            <span class='name'><a href="#map_api_attributes-class_method" title="map_api_attributes">map_api_attributes</a></span><span class='args'>(attributes)</span>
+            <span class='block'></span>
+          </span>
+        
+        
+      </th>
+      <td class="docstring">
+        <p>
+As ::map_human_attributes but API -&gt; human.
+</p>
+
+        
+          <p class='returns'>
+            Returns: 
+              <span class='return_types'>
+                 <tt>Hash</tt>
+              </span>
+          </p>
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <th class="signature">
+        
+          <span class='overload'>
+            <span class='name'><a href="#map_human_attributes-class_method" title="map_human_attributes">map_human_attributes</a></span><span class='args'>(attributes)</span>
+            <span class='block'></span>
+          </span>
+        
+        
+      </th>
+      <td class="docstring">
+        <p>
+Map human attributes to API attributes.
+</p>
+
+        
+          <p class='returns'>
+            Returns: 
+              <span class='return_types'>
+                 <tt>Hash</tt>
+              </span>
+          </p>
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <th class="signature">
+        
+          <span class='overload'>
+            <span class='name'><a href="#request-class_method" title="request">request</a></span><span class='args'>(verb, uri, body = &quot;&quot;)</span>
+            <span class='block'></span>
+          </span>
+        
+        
+      </th>
+      <td class="docstring">
+        <p>
+Send an HTTP request.
+</p>
+
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <th class="signature">
+        
+          <span class='overload'>
+            <span class='name'><a href="#resource_name-class_method" title="resource_name">resource_name</a></span><span class='args'></span>
+            <span class='block'></span>
+          </span>
+        
+        
+      </th>
+      <td class="docstring">
+        
+        
+      </td>
+    </tr>
+  
+</table>
+
+  </div>
+  <div class="section methodsummary instance public">
+    <h1>Public Instance Method Summary</h1>
+<table class="summary">
+  
+    <tr>
+      <th class="signature">
+        
+          <span class='overload'>
+            <span class='name'><a href="#map_human_attributes-instance_method" title="#map_human_attributes">#map_human_attributes</a></span><span class='args'></span>
+            <span class='block'></span>
+          </span>
+        
+        
+      </th>
+      <td class="docstring">
+        
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <th class="signature">
+        
+          <span class='overload'>
+            <span class='name'><a href="#new_record%3F-instance_method" title="#new_record?">#new_record?</a></span><span class='args'></span>
+            <span class='block'></span>
+          </span>
+        
+        
+      </th>
+      <td class="docstring">
+        
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <th class="signature">
+        
+          <span class='overload'>
+            <span class='name'><a href="#save-instance_method" title="#save">#save</a></span><span class='args'></span>
+            <span class='block'></span>
+          </span>
+        
+        
+      </th>
+      <td class="docstring">
+        <p>
+Save the attributes for the current record to the CRM.
+</p>
+
+        
+          <p class='returns'>
+            Returns: 
+              <span class='return_types'>
+                 <tt>Hash</tt>
+              </span>
+          </p>
+        
+      </td>
+    </tr>
+  
+</table>
+
+  </div>
+<div class="section methoddetails class public">
+  <h1>Public Class Method Details</h1>
+  
+    <div class="method">
+      <div class="method_header">
+  <h3>construct_record_from_response</h3>
+</div><div id="construct_record_from_response-class_method" class="section method">
+  <div class="details_title">
+    <div class='section methodsignature'>
+    <tt class='def'>
+      <span class='visibility'>public</span>
+      <span class='return_types'></span>
+      <span class='name'>construct_record_from_response</span><span class='args'>(response)</span>
+      <span class='block'></span>
+    </tt>
+  </div>
+
+</div><div class="section source">
+  <span>[<a class="source_link" href="#">View source</a>]</span>
+  <div class="source_code">
+    <table>
+      <tr>
+        <td>
+          <pre class="lines">
+
+
+107
+108
+109
+110
+111
+112
+113</pre>
+        </td>
+        <td>
+          <pre class="code"><span class="info file"># File 'lib/solve360/base.rb', line 107</span>
+
+<span class='def def kw'>def</span> <span class='construct_record_from_response identifier id'>construct_record_from_response</span><span class='lparen token'>(</span><span class='response identifier id'>response</span><span class='rparen token'>)</span>
+  <span class='attributes identifier id'>attributes</span> <span class='assign token'>=</span> <span class='map_api_attributes identifier id'>map_api_attributes</span><span class='lparen token'>(</span><span class='response identifier id'>response</span><span class='lbrack token'>[</span><span class='string val'>&quot;response&quot;</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>&quot;item&quot;</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>&quot;fields&quot;</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+  
+  <span class='record identifier id'>record</span> <span class='assign token'>=</span> <span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='attributes identifier id'>attributes</span><span class='rparen token'>)</span>
+  <span class='record identifier id'>record</span><span class='dot token'>.</span><span class='id identifier id'>id</span> <span class='assign token'>=</span> <span class='response identifier id'>response</span><span class='lbrack token'>[</span><span class='string val'>&quot;response&quot;</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>&quot;item&quot;</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>&quot;id&quot;</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span>
+  <span class='record identifier id'>record</span>
+<span class='end end kw'>end</span>
+</pre>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>
+    </div>
+  
+    <div class="method">
+      <div class="method_header">
+  <h3>create</h3>
+</div><div id="create-class_method" class="section method">
+  <div class="details_title">
+    <div class='section methodsignature'>
+    <tt class='def'>
+      <span class='visibility'>public</span>
+      <span class='return_types'></span>
+      <span class='name'>create</span><span class='args'>(attributes)</span>
+      <span class='block'></span>
+    </tt>
+  </div>
+
+</div><div class="section docstring">
+  <p>
+Create a record in the API
+</p>
+
+</div><div class="section tags">
+  <h2>Meta Tags</h2>
+  
+</div><div class="section source">
+  <span>[<a class="source_link" href="#">View source</a>]</span>
+  <div class="source_code">
+    <table>
+      <tr>
+        <td>
+          <pre class="lines">
+
+
+80
+81
+82
+83
+84</pre>
+        </td>
+        <td>
+          <pre class="code"><span class="info file"># File 'lib/solve360/base.rb', line 80</span>
+
+<span class='def def kw'>def</span> <span class='create identifier id'>create</span><span class='lparen token'>(</span><span class='attributes identifier id'>attributes</span><span class='rparen token'>)</span>
+  <span class='response identifier id'>response</span> <span class='assign token'>=</span> <span class='request identifier id'>request</span><span class='lparen token'>(</span><span class='symbol val'>:post</span><span class='comma token'>,</span> <span class='dstring node'>&quot;/#{resource_name}&quot;</span><span class='comma token'>,</span> <span class='map_human_attributes identifier id'>map_human_attributes</span><span class='lparen token'>(</span><span class='attributes identifier id'>attributes</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='to_xml identifier id'>to_xml</span><span class='lparen token'>(</span><span class='symbol val'>:root</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;request&quot;</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+        
+  <span class='construct_record_from_response identifier id'>construct_record_from_response</span><span class='lparen token'>(</span><span class='response identifier id'>response</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>
+    </div>
+  
+    <div class="method">
+      <div class="method_header">
+  <h3>fields</h3>
+</div><div id="fields-class_method" class="section method">
+  <div class="details_title">
+    <div class='section methodsignature'>
+    <tt class='def'>
+      <span class='visibility'>public</span>
+      <span class='return_types'></span>
+      <span class='name'>fields</span><span class='args'>(&amp;block)</span>
+      <span class='block'></span>
+    </tt>
+  </div>
+
+</div><div class="section source">
+  <span>[<a class="source_link" href="#">View source</a>]</span>
+  <div class="source_code">
+    <table>
+      <tr>
+        <td>
+          <pre class="lines">
+
+
+121
+122
+123
+124
+125
+126
+127</pre>
+        </td>
+        <td>
+          <pre class="code"><span class="info file"># File 'lib/solve360/base.rb', line 121</span>
+
+<span class='def def kw'>def</span> <span class='fields identifier id'>fields</span><span class='lparen token'>(</span><span class='bitand op'>&amp;</span><span class='block identifier id'>block</span><span class='rparen token'>)</span>
+  <span class='if if kw'>if</span> <span class='block_given? fid id'>block_given?</span>
+    <span class='@@fields ivar id'>@@fields</span><span class='dot token'>.</span><span class='merge! fid id'>merge!</span> <span class='yield yield kw'>yield</span>
+  <span class='else else kw'>else</span>
+    <span class='@@fields ivar id'>@@fields</span>
+  <span class='end end kw'>end</span>
+<span class='end end kw'>end</span>
+</pre>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>
+    </div>
+  
+    <div class="method">
+      <div class="method_header">
+  <h3>find</h3>
+</div><div id="find-class_method" class="section method">
+  <div class="details_title">
+    <div class='section methodsignature'>
+    <tt class='def'>
+      <span class='visibility'>public</span>
+      <span class='return_types'></span>
+      <span class='name'>find</span><span class='args'>(id)</span>
+      <span class='block'></span>
+    </tt>
+  </div>
+
+</div><div class="section docstring">
+  <p>
+Find a record
+</p>
+
+</div><div class="section tags">
+  <h2>Meta Tags</h2>
+  <div class="param">
+  <h3>Parameters:</h3>
+  <dl>
+  
+    
+      <dt>
+        <span class='type'>[<tt>Integer</tt>]</span>
+        <span class='name'>id</span>
+        
+      </dt>
+      <dd>
+        <span class='desc'><p>
+of the record on the CRM
+</p>
+</span>
+      </dd>
+    
+  
+  </dl>
+</div>
+</div><div class="section source">
+  <span>[<a class="source_link" href="#">View source</a>]</span>
+  <div class="source_code">
+    <table>
+      <tr>
+        <td>
+          <pre class="lines">
+
+
+89
+90
+91
+92
+93</pre>
+        </td>
+        <td>
+          <pre class="code"><span class="info file"># File 'lib/solve360/base.rb', line 89</span>
+
+<span class='def def kw'>def</span> <span class='find identifier id'>find</span><span class='lparen token'>(</span><span class='id identifier id'>id</span><span class='rparen token'>)</span>
+  <span class='response identifier id'>response</span> <span class='assign token'>=</span> <span class='request identifier id'>request</span><span class='lparen token'>(</span><span class='symbol val'>:get</span><span class='comma token'>,</span> <span class='dstring node'>&quot;/#{resource_name}/#{id}&quot;</span><span class='rparen token'>)</span>
+                 
+  <span class='construct_record_from_response identifier id'>construct_record_from_response</span><span class='lparen token'>(</span><span class='response identifier id'>response</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>
+    </div>
+  
+    <div class="method">
+      <div class="method_header">
+  <h3>map_api_attributes</h3>
+</div><div id="map_api_attributes-class_method" class="section method">
+  <div class="details_title">
+    <div class='section methodsignature'>
+    <tt class='def'>
+      <span class='visibility'>public</span>
+      <span class='return_types'><tt>Hash</tt></span>
+      <span class='name'>map_api_attributes</span><span class='args'>(attributes)</span>
+      <span class='block'></span>
+    </tt>
+  </div>
+
+</div><div class="section docstring">
+  <p>
+As ::map_human_attributes but API -&gt; human
+</p>
+
+</div><div class="section tags">
+  <h2>Meta Tags</h2>
+  <div class="examples">
+  
+    <h3>Example: <small></small></h3>
+    <div class="docstring">
+      <pre class="code">  <span class='map_attributes identifier id'>map_attributes</span><span class='lparen token'>(</span><span class='symbol val'>:firstname</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;Steve&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:custom12345</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;Web Developer&quot;</span><span class='rparen token'>)</span>
+  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span><span class='string val'>&quot;First Name&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;Steve&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;Description&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;Web Developer&quot;</span><span class='rbrace token'>}</span>
+</pre>
+    </div>
+  
+</div>
+<div class="return">
+  <h3>Returns:</h3>
+  <dl>
+  
+    <dt>
+      
+        <span class='type'>[<tt>Hash</tt>]</span>
+      
+      
+        <span class='name'></span>
+      
+      
+    </dt>
+    <dd>
+      <span class='desc'><p>
+human mapped attributes
+</p>
+</span>
+    </dd>
+  
+  </dl>
+</div>
+
+</div><div class="section source">
+  <span>[<a class="source_link" href="#">View source</a>]</span>
+  <div class="source_code">
+    <table>
+      <tr>
+        <td>
+          <pre class="lines">
+
+
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75</pre>
+        </td>
+        <td>
+          <pre class="code"><span class="info file"># File 'lib/solve360/base.rb', line 65</span>
+
+<span class='def def kw'>def</span> <span class='map_api_attributes identifier id'>map_api_attributes</span><span class='lparen token'>(</span><span class='attributes identifier id'>attributes</span><span class='rparen token'>)</span>
+  <span class='attributes identifier id'>attributes</span><span class='dot token'>.</span><span class='stringify_keys! fid id'>stringify_keys!</span>
+  
+  <span class='mapped_attributes identifier id'>mapped_attributes</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
+  
+  <span class='@@fields ivar id'>@@fields</span><span class='dot token'>.</span><span class='each identifier id'>each</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='human identifier id'>human</span><span class='comma token'>,</span> <span class='api identifier id'>api</span><span class='bitor op'>|</span>
+    <span class='mapped_attributes identifier id'>mapped_attributes</span><span class='lbrack token'>[</span><span class='human identifier id'>human</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='attributes identifier id'>attributes</span><span class='lbrack token'>[</span><span class='api identifier id'>api</span><span class='rbrack token'>]</span> <span class='if if_mod kw'>if</span> <span class='notop op'>!</span><span class='attributes identifier id'>attributes</span><span class='lbrack token'>[</span><span class='api identifier id'>api</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='blank? fid id'>blank?</span>
+  <span class='end end kw'>end</span>
+  
+  <span class='mapped_attributes identifier id'>mapped_attributes</span>
+<span class='end end kw'>end</span>
+</pre>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>
+    </div>
+  
+    <div class="method">
+      <div class="method_header">
+  <h3>map_human_attributes</h3>
+</div><div id="map_human_attributes-class_method" class="section method">
+  <div class="details_title">
+    <div class='section methodsignature'>
+    <tt class='def'>
+      <span class='visibility'>public</span>
+      <span class='return_types'><tt>Hash</tt></span>
+      <span class='name'>map_human_attributes</span><span class='args'>(attributes)</span>
+      <span class='block'></span>
+    </tt>
+  </div>
+
+</div><div class="section docstring">
+  <p>
+Map human attributes to API attributes
+</p>
+
+</div><div class="section tags">
+  <h2>Meta Tags</h2>
+  <div class="examples">
+  
+    <h3>Example: <small></small></h3>
+    <div class="docstring">
+      <pre class="code">  <span class='map_attributes identifier id'>map_attributes</span><span class='lparen token'>(</span><span class='string val'>&quot;First Name&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;Steve&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;Description&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;Web Developer&quot;</span><span class='rparen token'>)</span>
+  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span><span class='symbol val'>:firstname</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;Steve&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:custom12345</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;Web Developer&quot;</span><span class='rbrace token'>}</span>
+</pre>
+    </div>
+  
+</div>
+<div class="return">
+  <h3>Returns:</h3>
+  <dl>
+  
+    <dt>
+      
+        <span class='type'>[<tt>Hash</tt>]</span>
+      
+      
+        <span class='name'></span>
+      
+      
+    </dt>
+    <dd>
+      <span class='desc'><p>
+API mapped attributes
+</p>
+</span>
+    </dd>
+  
+  </dl>
+</div>
+
+</div><div class="section source">
+  <span>[<a class="source_link" href="#">View source</a>]</span>
+  <div class="source_code">
+    <table>
+      <tr>
+        <td>
+          <pre class="lines">
+
+
+47
+48
+49
+50
+51
+52
+53
+54
+55</pre>
+        </td>
+        <td>
+          <pre class="code"><span class="info file"># File 'lib/solve360/base.rb', line 47</span>
+
+<span class='def def kw'>def</span> <span class='map_human_attributes identifier id'>map_human_attributes</span><span class='lparen token'>(</span><span class='attributes identifier id'>attributes</span><span class='rparen token'>)</span>
+  <span class='mapped_attributes identifier id'>mapped_attributes</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
+
+  <span class='@@fields ivar id'>@@fields</span><span class='dot token'>.</span><span class='each identifier id'>each</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='human identifier id'>human</span><span class='comma token'>,</span> <span class='api identifier id'>api</span><span class='bitor op'>|</span>
+    <span class='mapped_attributes identifier id'>mapped_attributes</span><span class='lbrack token'>[</span><span class='api identifier id'>api</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='attributes identifier id'>attributes</span><span class='lbrack token'>[</span><span class='human identifier id'>human</span><span class='rbrack token'>]</span> <span class='if if_mod kw'>if</span> <span class='notop op'>!</span><span class='attributes identifier id'>attributes</span><span class='lbrack token'>[</span><span class='human identifier id'>human</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='blank? fid id'>blank?</span>
+  <span class='end end kw'>end</span>
+
+  <span class='mapped_attributes identifier id'>mapped_attributes</span>
+<span class='end end kw'>end</span>
+</pre>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>
+    </div>
+  
+    <div class="method">
+      <div class="method_header">
+  <h3>request</h3>
+</div><div id="request-class_method" class="section method">
+  <div class="details_title">
+    <div class='section methodsignature'>
+    <tt class='def'>
+      <span class='visibility'>public</span>
+      <span class='return_types'></span>
+      <span class='name'>request</span><span class='args'>(verb, uri, body = &quot;&quot;)</span>
+      <span class='block'></span>
+    </tt>
+  </div>
+
+</div><div class="section docstring">
+  <p>
+Send an HTTP request
+</p>
+
+</div><div class="section tags">
+  <h2>Meta Tags</h2>
+  
+</div><div class="section source">
+  <span>[<a class="source_link" href="#">View source</a>]</span>
+  <div class="source_code">
+    <table>
+      <tr>
+        <td>
+          <pre class="lines">
+
+
+100
+101
+102
+103
+104
+105</pre>
+        </td>
+        <td>
+          <pre class="code"><span class="info file"># File 'lib/solve360/base.rb', line 100</span>
+
+<span class='def def kw'>def</span> <span class='request identifier id'>request</span><span class='lparen token'>(</span><span class='verb identifier id'>verb</span><span class='comma token'>,</span> <span class='uri identifier id'>uri</span><span class='comma token'>,</span> <span class='body identifier id'>body</span> <span class='assign token'>=</span> <span class='string val'>&quot;&quot;</span><span class='rparen token'>)</span>
+  <span class='send identifier id'>send</span><span class='lparen token'>(</span><span class='verb identifier id'>verb</span><span class='comma token'>,</span> <span class='HTTParty constant id'>HTTParty</span><span class='dot token'>.</span><span class='normalize_base_uri identifier id'>normalize_base_uri</span><span class='lparen token'>(</span><span class='config identifier id'>config</span><span class='dot token'>.</span><span class='url identifier id'>url</span><span class='rparen token'>)</span> <span class='plus op'>+</span> <span class='uri identifier id'>uri</span><span class='comma token'>,</span>
+      <span class='symbol val'>:headers</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span><span class='string val'>&quot;Content-Type&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;application/xml&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;Accepts&quot;</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;application/json&quot;</span><span class='rbrace token'>}</span><span class='comma token'>,</span>
+      <span class='symbol val'>:body</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='body identifier id'>body</span><span class='comma token'>,</span>
+      <span class='symbol val'>:basic_auth</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span><span class='symbol val'>:username</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='config identifier id'>config</span><span class='dot token'>.</span><span class='username identifier id'>username</span><span class='comma token'>,</span> <span class='symbol val'>:password</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='config identifier id'>config</span><span class='dot token'>.</span><span class='token identifier id'>token</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>
+    </div>
+  
+    <div class="method">
+      <div class="method_header">
+  <h3>resource_name</h3>
+</div><div id="resource_name-class_method" class="section method">
+  <div class="details_title">
+    <div class='section methodsignature'>
+    <tt class='def'>
+      <span class='visibility'>public</span>
+      <span class='return_types'></span>
+      <span class='name'>resource_name</span><span class='args'></span>
+      <span class='block'></span>
+    </tt>
+  </div>
+
+</div><div class="section source">
+  <span>[<a class="source_link" href="#">View source</a>]</span>
+  <div class="source_code">
+    <table>
+      <tr>
+        <td>
+          <pre class="lines">
+
+
+115
+116
+117</pre>
+        </td>
+        <td>
+          <pre class="code"><span class="info file"># File 'lib/solve360/base.rb', line 115</span>
+
+<span class='def def kw'>def</span> <span class='resource_name identifier id'>resource_name</span>
+  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='name identifier id'>name</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='dot token'>.</span><span class='demodulize identifier id'>demodulize</span><span class='dot token'>.</span><span class='underscore identifier id'>underscore</span><span class='dot token'>.</span><span class='pluralize identifier id'>pluralize</span>
+<span class='end end kw'>end</span>
+</pre>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>
+    </div>
+  
+</div><div class="section methoddetails instance public">
+  <h1>Public Instance Method Details</h1>
+  
+    <div class="method">
+      <div class="method_header">
+  <h3>map_human_attributes</h3>
+</div><div id="map_human_attributes-instance_method" class="section method">
+  <div class="details_title">
+    <div class='section methodsignature'>
+    <tt class='def'>
+      <span class='visibility'>public</span>
+      <span class='return_types'></span>
+      <span class='name'>map_human_attributes</span><span class='args'></span>
+      <span class='block'></span>
+    </tt>
+  </div>
+
+</div><div class="section tags">
+  <h2>Meta Tags</h2>
+  <div class="see">
+  <h3>See Also:</h3>
+  <dl>
+    <dt></dt>
+    <dd>
+      <span class='desc'>
+        <tt><a href="Base/Base.html#map_human_attributes-class_method" title="Base::map_human_attributes">Base::map_human_attributes</a></tt>
+      </span>
+    </dd>
+  </dl>
+</div>
+
+</div><div class="section source">
+  <span>[<a class="source_link" href="#">View source</a>]</span>
+  <div class="source_code">
+    <table>
+      <tr>
+        <td>
+          <pre class="lines">
+
+
+14
+15
+16</pre>
+        </td>
+        <td>
+          <pre class="code"><span class="info file"># File 'lib/solve360/base.rb', line 14</span>
+
+<span class='def def kw'>def</span> <span class='map_human_attributes identifier id'>map_human_attributes</span>
+  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='class identifier id'>class</span><span class='dot token'>.</span><span class='map_human_attributes identifier id'>map_human_attributes</span><span class='lparen token'>(</span><span class='self self kw'>self</span><span class='dot token'>.</span><span class='attributes identifier id'>attributes</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>
+    </div>
+  
+    <div class="method">
+      <div class="method_header">
+  <h3>new_record?</h3>
+</div><div id="new_record?-instance_method" class="section method">
+  <div class="details_title">
+    <div class='section methodsignature'>
+    <tt class='def'>
+      <span class='visibility'>public</span>
+      <span class='return_types'></span>
+      <span class='name'>new_record?</span><span class='args'></span>
+      <span class='block'></span>
+    </tt>
+  </div>
+
+</div><div class="section source">
+  <span>[<a class="source_link" href="#">View source</a>]</span>
+  <div class="source_code">
+    <table>
+      <tr>
+        <td>
+          <pre class="lines">
+
+
+33
+34
+35</pre>
+        </td>
+        <td>
+          <pre class="code"><span class="info file"># File 'lib/solve360/base.rb', line 33</span>
+
+<span class='def def kw'>def</span> <span class='new_record? fid id'>new_record?</span>
+  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='id identifier id'>id</span> <span class='eq op'>==</span> <span class='nil nil kw'>nil</span>
+<span class='end end kw'>end</span>
+</pre>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>
+    </div>
+  
+    <div class="method">
+      <div class="method_header">
+  <h3>save</h3>
+</div><div id="save-instance_method" class="section method">
+  <div class="details_title">
+    <div class='section methodsignature'>
+    <tt class='def'>
+      <span class='visibility'>public</span>
+      <span class='return_types'><tt>Hash</tt></span>
+      <span class='name'>save</span><span class='args'></span>
+      <span class='block'></span>
+    </tt>
+  </div>
+
+</div><div class="section docstring">
+  <p>
+Save the attributes for the current record to the CRM
+</p>
+<p>
+If the record is new it will be created on the CRM
+</p>
+
+</div><div class="section tags">
+  <h2>Meta Tags</h2>
+  <div class="return">
+  <h3>Returns:</h3>
+  <dl>
+  
+    <dt>
+      
+        <span class='type'>[<tt>Hash</tt>]</span>
+      
+      
+        <span class='name'></span>
+      
+      
+    </dt>
+    <dd>
+      <span class='desc'><p>
+response values from API
+</p>
+</span>
+    </dd>
+  
+  </dl>
+</div>
+
+</div><div class="section source">
+  <span>[<a class="source_link" href="#">View source</a>]</span>
+  <div class="source_code">
+    <table>
+      <tr>
+        <td>
+          <pre class="lines">
+
+
+23
+24
+25
+26
+27
+28
+29
+30
+31</pre>
+        </td>
+        <td>
+          <pre class="code"><span class="info file"># File 'lib/solve360/base.rb', line 23</span>
+
+<span class='def def kw'>def</span> <span class='save identifier id'>save</span>
+  <span class='if if kw'>if</span> <span class='new_record? fid id'>new_record?</span>
+    <span class='new_record identifier id'>new_record</span> <span class='assign token'>=</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='class identifier id'>class</span><span class='dot token'>.</span><span class='create identifier id'>create</span><span class='lparen token'>(</span><span class='attributes identifier id'>attributes</span><span class='rparen token'>)</span>
+    <span class='self self kw'>self</span><span class='dot token'>.</span><span class='id identifier id'>id</span> <span class='assign token'>=</span> <span class='new_record identifier id'>new_record</span><span class='dot token'>.</span><span class='id identifier id'>id</span>
+  <span class='else else kw'>else</span>
+    <span class='puts identifier id'>puts</span> <span class='map_human_attributes identifier id'>map_human_attributes</span><span class='dot token'>.</span><span class='to_xml identifier id'>to_xml</span><span class='lparen token'>(</span><span class='symbol val'>:root</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;request&quot;</span><span class='rparen token'>)</span>
+    <span class='self self kw'>self</span><span class='dot token'>.</span><span class='class identifier id'>class</span><span class='dot token'>.</span><span class='request identifier id'>request</span><span class='lparen token'>(</span><span class='symbol val'>:put</span><span class='comma token'>,</span> <span class='dstring node'>&quot;/#{self.class.resource_name}/#{id}&quot;</span><span class='comma token'>,</span> <span class='map_human_attributes identifier id'>map_human_attributes</span><span class='dot token'>.</span><span class='to_xml identifier id'>to_xml</span><span class='lparen token'>(</span><span class='symbol val'>:root</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;request&quot;</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+  <span class='end end kw'>end</span>
+<span class='end end kw'>end</span>
+</pre>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>
+    </div>
+  
+</div>
+  </div>
+
+</div>
+    </div>
+    <div id="yard_info">
+  Generated on Thursday, October 08 2009 at 02:28:33 PM by 
+  <abbr class="yard" title="Yay! A Ruby Documentation Tool"><a href="http://yard.soen.ca">YARD</a></abbr> 
+  0.2.3.5 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

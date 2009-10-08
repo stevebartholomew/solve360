@@ -3,8 +3,8 @@ puts "Loading Solve360 gem"
 
 libs =  " -r irb/completion"
 libs << " -r rubygems "
-libs << " -r #{File.dirname(__FILE__) + '/console-startup.rb'}"
 libs <<  " -r #{File.dirname(__FILE__) + '/../lib/solve360.rb'}"
+libs << " -r #{File.dirname(__FILE__) + '/console-startup.rb'}"
 
 if ARGV[0] && ARGV[0].match(/\.rb/)
   puts "Loading configuration #{ARGV[0]}"
