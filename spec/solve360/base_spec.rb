@@ -1,12 +1,12 @@
 require File.join(File.dirname(__FILE__), "..", "spec_helper")
 
-class Person < Solve360::Base
+class Person
+  include Solve360::Model
+  
   fields do
     { "Job Title" => "job_title" }
   end
 end
-
-
 
 describe "A Solve360 model" do
   it "should determine model name" do

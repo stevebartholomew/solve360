@@ -1,10 +1,9 @@
 module Solve360
-  class Contact < Solve360::Base
+  class Contact
+    include Solve360::Model
+    
     fields do 
-      {"Archived" => "archive",
-      "Assigned To" => "assignedto",
-      "Background" => "background",
-      "Business Address" => "businessaddress",
+      {"Business Address" => "businessaddress",
       "Business Direct" => "businessphonedirect",
       "Business Email" => "businessemail",
       "Business Fax" => "businessfax",

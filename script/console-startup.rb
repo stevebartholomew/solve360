@@ -1,1 +1,1 @@
-Solve360::Base.configure YAML.load(File.read(File.join(File.dirname(__FILE__), '..', 'spec', 'api_settings.yml')))
+Solve360::Config.configure YAML.load(File.read(File.join(File.dirname(__FILE__), '..', 'spec', 'api_settings.yml')))
