@@ -16,7 +16,7 @@ You can configure the API settings in a number of ways, but you must specify:
 
 The configuration uses [Configify](http://github.com/curve21/configify) so you can use a block or hash to define values:
 
-    Solve360::Base.configure do |config|
+    Solve360::Config.configure do |config|
       config.url = "https://secure.solve360.com"
       config.username = "user@user.com"
       config.token = "token"
@@ -24,11 +24,11 @@ The configuration uses [Configify](http://github.com/curve21/configify) so you c
 
 Because configure accepts a hash, you can configure with YAML:
 
-    Solve360::Base.configure YAML.load(File.read("/path/to/file"))
+    Solve360::Config.configure YAML.load(File.read("/path/to/file"))
 
 And if you're using environments like Rails:
 
-    Solve360::Base.configure YAML.load(File.read("/path/to/file"))[RAILS_ENV]
+    Solve360::Config.configure YAML.load(File.read("/path/to/file"))[RAILS_ENV]
 
 ### Creating Records
 

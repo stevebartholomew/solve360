@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{solve360}
-  s.version = "0.0.2"
+  s.version = "0.0.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Stephen Bartholomew"]
@@ -21,8 +21,10 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "lib/solve360.rb",
-     "lib/solve360/base.rb",
+     "lib/solve360/company.rb",
+     "lib/solve360/config.rb",
      "lib/solve360/contact.rb",
+     "lib/solve360/model.rb",
      "spec/api_settings.yml",
      "spec/api_settings.yml.sample",
      "spec/fixtures/contacts/create-success.json",
@@ -31,7 +33,7 @@ Gem::Specification.new do |s|
      "spec/fixtures/contacts/show-success.json",
      "spec/fixtures/contacts/update-failed.json",
      "spec/fixtures/contacts/update-success.json",
-     "spec/solve360/base_spec.rb",
+     "spec/solve360/model_spec.rb",
      "spec/spec.opts",
      "spec/spec_helper.rb"
   ]
@@ -41,7 +43,7 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.5}
   s.summary = %q{Libary for working with the Solve360 CRM API}
   s.test_files = [
-    "spec/solve360/base_spec.rb",
+    "spec/solve360/model_spec.rb",
      "spec/spec_helper.rb"
   ]
 
