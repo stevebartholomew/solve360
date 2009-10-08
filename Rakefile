@@ -24,6 +24,12 @@ Spec::Rake::SpecTask.new(:spec) do |spec|
   spec.spec_opts = ['--options', 'spec/spec.opts']
 end
 
+Spec::Rake::SpecTask.new(:coverage) do |spec|
+  spec.spec_files = FileList['spec/**/*_spec.rb']
+  spec.rcov = true
+  spec.rcov_opts = ['--exclude', 'examples']
+end
+
 begin
   require "yard"
   YARD::Rake::YardocTask.new do |t|

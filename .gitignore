@@ -1,5 +1,7 @@
 spec/api_settings.yml
+coverage
 .DS_Store
 NOTES
 .yardoc
 doc
+pkg

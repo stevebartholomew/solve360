@@ -6,6 +6,13 @@ http://norada.com/
 
 ## Usage
 
+### Installing
+  
+The gem is hosted on [Gem Cutter](http://gemcutter.org):
+
+    gem sources -a http://gemcutter.org
+    gem install solve360
+
 ### Configuration
 
 You can configure the API settings in a number of ways, but you must specify:
