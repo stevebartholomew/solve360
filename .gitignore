@@ -1,3 +1,5 @@
 spec/api_settings.yml
 .DS_Store
 NOTES
+.yardoc
+doc
