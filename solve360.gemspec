@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Stephen Bartholomew"]
-  s.date = %q{2009-10-08}
+  s.date = %q{2009-10-16}
   s.description = %q{}
   s.email = %q{Stephen Bartholomew}
   s.extra_rdoc_files = [
@@ -28,6 +28,7 @@ Gem::Specification.new do |s|
      "spec/api_settings.yml",
      "spec/api_settings.yml.sample",
      "spec/fixtures/contacts/create-success.json",
+     "spec/fixtures/contacts/find-company-success.json",
      "spec/fixtures/contacts/find-success.json",
      "spec/fixtures/contacts/index.json",
      "spec/fixtures/contacts/show-success.json",
@@ -53,16 +54,16 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<configify>, [">= 0.0.1"])
-      s.add_runtime_dependency(%q<activesupport>, [">= 2.3.0"])
+      s.add_runtime_dependency(%q<activesupport>, [">= 0"])
       s.add_runtime_dependency(%q<httparty>, [">= 0.4.5"])
     else
       s.add_dependency(%q<configify>, [">= 0.0.1"])
-      s.add_dependency(%q<activesupport>, [">= 2.3.0"])
+      s.add_dependency(%q<activesupport>, [">= 0"])
       s.add_dependency(%q<httparty>, [">= 0.4.5"])
     end
   else
     s.add_dependency(%q<configify>, [">= 0.0.1"])
-    s.add_dependency(%q<activesupport>, [">= 2.3.0"])
+    s.add_dependency(%q<activesupport>, [">= 0"])
     s.add_dependency(%q<httparty>, [">= 0.4.5"])
   end
 end

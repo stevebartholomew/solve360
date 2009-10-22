@@ -11,7 +11,7 @@ begin
     gem.authors = ["Stephen Bartholomew"]
     gem.files =  FileList["[A-Z]*", "{lib,spec}/**/*"]
     gem.add_dependency("configify", ">=0.0.1")
-    gem.add_dependency("activesupport", ">=2.3.0")  
+    gem.add_dependency("activesupport")  
     gem.add_dependency("httparty", ">=0.4.5")
   end
 rescue LoadError

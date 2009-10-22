@@ -1,8 +1,8 @@
 module Solve360
   class Company
-    include Solve360::Model
+    include Solve360::Item
     
-    fields do
+    map_fields do
       {"Billing Address" => "billingaddress", 
       "Company Address" => "mainaddress", 
       "Company Fax" => "fax", 

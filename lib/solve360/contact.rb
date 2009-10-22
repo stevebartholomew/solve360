@@ -1,8 +1,8 @@
 module Solve360
   class Contact
-    include Solve360::Model
+    include Solve360::Item
     
-    fields do 
+    map_fields do 
       {"Business Address" => "businessaddress",
       "Business Direct" => "businessphonedirect",
       "Business Email" => "businessemail",
