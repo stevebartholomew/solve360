@@ -83,9 +83,9 @@ module Solve360
     
     module ClassMethods
     
-      # Map human attributes to API attributes
+      # Map human map_human_fields to API fields
       # 
-      # @param [Hash] human mapped attributes
+      # @param [Hash] human mapped fields
       # @example
       #   map_attributes("First Name" => "Steve", "Description" => "Web Developer")
       #   => {:firstname => "Steve", :custom12345 => "Web Developer"}
@@ -102,7 +102,7 @@ module Solve360
         mapped_fields
       end
       
-      # As ::map_human_attributes but API -> human
+      # As ::map_api_fields but API -> human
       #
       # @param [Hash] API mapped attributes
       # @example
@@ -124,7 +124,7 @@ module Solve360
       
       # Create a record in the API
       #
-      # @param [Hash] field => value as configured in Model::fields
+      # @param [Hash] field => value as configured in Item::fields
       def create(fields, options = {})
         new_record = self.new(fields)
         new_record.save

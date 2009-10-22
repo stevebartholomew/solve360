@@ -41,17 +41,17 @@ And if you're using environments like Rails:
 
 Base attributes are set up for you.  Creating is simple:
 
-    Solve360::Contact.create("First Name" => "Stephen", "Last Name" => "Bartholomew")
+    Solve360::Contact.create(:fields => "First Name" => "Stephen", "Last Name" => "Bartholomew")
     
 Custom attributes can be added:
 
-    Solve360::Contact.fields do
+    Solve360::Contact.map_fields do
       {"Description" => "custom20394", "Location" => "custom392434"}
     end
 
 and then used:
 
-    contact = Solve360::Contact.create("First Name" => "Steve", "Description" => "Web Developer", "Location" => "England")
+    contact = Solve360::Contact.create(:fields => "First Name" => "Steve", "Description" => "Web Developer", "Location" => "England")
     contact.id
     => The ID of the record created on the CRM
     
@@ -65,11 +65,23 @@ You can find by the ID of a record on the CRM:
 
 Once you have set the attributes on a model you can simply save:
 
-    contact.attributes["First Name"] = "Steve"
+    contact.fields["First Name"] = "Steve"
     contact.save
 
 If the record does not have an ID it'll be created, otherwise the details will be saved.
 
+### Related Items
+
+Related items can be access via:
+  
+    contact.related_items
+    => {"name" => "Curve21", "id" => "12345"}
+
+And added:
+
+    contact.add_related_item({"name" => "ACME Ltd", "id" => "91284"})
+    contact.save
+    
 ## Support/Bugs
 
 [Lighthouse](http://c21.lighthouseapp.com/projects/38966-solve360/overview)
