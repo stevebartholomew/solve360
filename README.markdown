@@ -82,6 +82,22 @@ And added:
     contact.add_related_item({"name" => "ACME Ltd", "id" => "91284"})
     contact.save
     
+### Ownership
+
+You can specify the ownership of a record directly:
+
+    contact.ownership = 123456
+    
+Or you can add a default value to the configuration:
+
+    config.default_ownership = 123456
+
+If no ownership is specified, the default will be used. 
+
+### API IDs
+
+All Solve360 API IDs can be found in the 'My Account' > 'API Reference' section of the desktop.
+    
 ## Support/Bugs
 
 [Lighthouse](http://c21.lighthouseapp.com/projects/38966-solve360/overview)

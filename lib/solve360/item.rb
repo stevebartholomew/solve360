@@ -42,6 +42,11 @@ module Solve360
     # @return [Hash] response values from API
     def save
       response = []
+      
+      if self.ownership.blank?
+        self.ownership = Solve360::Config.config.default_ownership
+      end
+      
       if new_record?
         response = self.class.request(:post, "/#{self.class.resource_name}", to_request)
         self.id = response["response"]["item"]["id"]
@@ -72,6 +77,8 @@ module Solve360
         
         xml << "</relateditems>"
       end
+      
+      xml << "<ownership>#{ownership}</ownership>"
       xml << "</request>"
       
       xml

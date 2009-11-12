@@ -106,6 +106,39 @@ describe "Creating a record" do
       @contact.id.should == "12345"
     end
   end
+  
+  context "specifying ownership" do
+    before do
+      stub_http_response_with("contacts/create-success.json")
+      @contact = Solve360::Contact.new(:fields => {"First Name" => "Catherine"})
+      @contact.ownership = "12345"
+      @contact.save
+    end
+    
+    it "should have assigned a default ownership" do
+      @contact.ownership.should == "12345"
+    end
+    
+    it "should contain ownership in any requests" do
+      @contact.to_request.should match(/\<ownership\>12345\<\/ownership\>/)
+    end
+  end
+  
+  context "default ownership" do
+    before do
+      stub_http_response_with("contacts/create-success.json")
+      @contact = Solve360::Contact.new(:fields => {"First Name" => "Catherine"})
+      @contact.save
+    end
+    
+    it "should have assigned a default ownership" do
+      @contact.ownership.should == 536664
+    end
+    
+    it "should contain ownership in any requests" do
+      @contact.to_request.should match(/\<ownership\>536664\<\/ownership\>/)
+    end
+  end
 end
 
 describe "Finding a record" do
@@ -122,6 +155,10 @@ describe "Finding a record" do
     
     it "should have relations" do
       @contact.related_items.first["name"].should == "Curve21"
+    end
+    
+    it "should have ownership" do
+      @contact.ownership.should == "536663"
     end
   end
 end
