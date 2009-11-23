@@ -17,7 +17,9 @@ module Solve360
       "Last Name" => "lastname",
       "Personal Email" => "personalemail",
       "Related To" => "relatedto",
-      "Website" => "website"}
+      "Website" => "website",
+      "Background" => "background"
+      }
     end
   end
 end

@@ -10,7 +10,8 @@ module Solve360
       "Company Phone" => "phone", 
       "Related To" => "relatedto", 
       "Shipping Address" => "shippingaddress", 
-      "Website" => "website"}
+      "Website" => "website",
+      "Background" => "background"}
     end
   end
 end
