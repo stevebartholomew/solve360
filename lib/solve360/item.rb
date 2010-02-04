@@ -198,7 +198,7 @@ module Solve360
       
       def construct_record_from_collection(response)
         response["response"].collect do |item|  
-          item = item.second
+          item = item[1]
           if item.respond_to?(:keys)
             attributes = {}
             attributes[:id] = item["id"]
