@@ -57,6 +57,12 @@ and then used:
     
 ### Finding
 
+You can pull all records with:
+    
+    contacts = Solve360::Contact.find(:all)
+    
+**Please Note:** It's not yet possible to pass filter conditions to find(:all).
+    
 You can find by the ID of a record on the CRM:
 
     contact = Solve360::Contact.find(12345)
