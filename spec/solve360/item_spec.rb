@@ -196,3 +196,18 @@ describe "Adding a releated item" do
     @contact.related_items.first["name"].should == "A New Company"
   end
 end
+
+describe "Finding all records" do
+  before do
+    stub_http_response_with("contacts/find-all.json")
+    @contacts = Solve360::Contact.find(:all)
+  end
+  
+  it "should contain all contacts" do
+    @contacts.size.should == 2
+    first = @contacts.first
+    first.class.should == Solve360::Contact
+    first.fields["First Name"].should == "Aaron"
+    first.fields["Last Name"].should == "Baileys"
+  end
+end

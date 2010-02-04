@@ -15,7 +15,7 @@ begin
     gem.add_dependency("httparty", ">=0.4.5")
   end
 rescue LoadError
-  puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
+  puts "Jeweler not available. Install it with: gem install jeweler"
 end
 
 Spec::Rake::SpecTask.new(:spec) do |spec|
