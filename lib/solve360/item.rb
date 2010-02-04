@@ -159,7 +159,7 @@ module Solve360
       
       # Find all records
       def find_all
-        response = request(:get, "/#{resource_name}/")
+        response = request(:get, "/#{resource_name}/", "<request><layout>1</layout></request>")
         construct_record_from_collection(response)
       end
       
