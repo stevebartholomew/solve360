@@ -204,6 +204,7 @@ describe "Finding all records" do
   end
   
   it "should contain all contacts" do
+    puts @contacts.inspect
     @contacts.size.should == 2
     first = @contacts.first
     first.class.should == Solve360::Contact

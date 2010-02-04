@@ -138,13 +138,29 @@ module Solve360
         new_record
       end
       
-      # Find a record 
+      # Find records
+      # 
+      # @param [Integer, Symbol] id of the record on the CRM or :all
+      def find(id)
+        if id == :all
+          find_all
+        else
+          find_one(id)
+        end
+      end
+      
+      # Find a single record
       # 
       # @param [Integer] id of the record on the CRM
-      def find(id)
+      def find_one(id)
         response = request(:get, "/#{resource_name}/#{id}")
-                       
-        construct_record_from_response(response)
+        construct_record_from_singular(response)
+      end
+      
+      # Find all records
+      def find_all
+        response = request(:get, "/#{resource_name}/")
+        construct_record_from_collection(response)
       end
       
       # Send an HTTP request
@@ -159,7 +175,7 @@ module Solve360
             :basic_auth => {:username => Solve360::Config.config.username, :password => Solve360::Config.config.token})
       end
       
-      def construct_record_from_response(response)
+      def construct_record_from_singular(response)
         item = response["response"]["item"]
         item.symbolize_keys!
         
@@ -178,6 +194,20 @@ module Solve360
         end
         
         record
+      end
+      
+      def construct_record_from_collection(response)
+        response["response"].collect do |item|  
+          item = item.second
+          if item.respond_to?(:keys)
+            attributes = {}
+            attributes[:id] = item["id"]
+          
+            attributes[:fields] = map_api_fields(item)
+
+            record = new(attributes)
+          end
+        end.compact
       end
       
       def resource_name
