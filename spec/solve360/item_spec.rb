@@ -212,3 +212,16 @@ describe "Finding all records" do
     first.fields["Last Name"].should == "Baileys"
   end
 end
+
+describe "Handling errors" do
+  before do 
+    stub_http_response_with("contacts/save-failed.json")
+    @contact = Solve360::Contact.new(:fields => {"First Name" => "Steve"})
+  end
+  
+  it "should be invalid" do
+    lambda {
+      @contact.save
+    }.should raise_error(Solve360::SaveFailure)
+  end
+end

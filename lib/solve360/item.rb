@@ -49,14 +49,23 @@ module Solve360
       
       if new_record?
         response = self.class.request(:post, "/#{self.class.resource_name}", to_request)
-        self.id = response["response"]["item"]["id"]
+        
+        if !response["response"]["errors"]
+          self.id = response["response"]["item"]["id"]
+        end
       else
         response = self.class.request(:put, "/#{self.class.resource_name}/#{id}", to_request)
       end
       
-      related_items.concat(related_items_to_add)
-      
-      response
+      if response["response"]["errors"]
+        message = response["response"]["errors"].map {|k,v| "#{k}: #{v}" }.join("\n")
+        raise Solve360::SaveFailure, message
+      else
+        related_items.concat(related_items_to_add)
+
+        response
+      end
+
     end
     
     def new_record?
