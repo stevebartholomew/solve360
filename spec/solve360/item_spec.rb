@@ -227,7 +227,18 @@ end
 
 describe "CGI Converting values" do
   it "should convert html entities" do
-    @contact = Solve360::Contact.new(:fields => {"First Name" => "Steve & Cat"})
+    @contact = Solve360::Contact.new(:fields => {"First Name" => "Steve & Cat", "Last Name" => 29})
     @contact.to_request.should match(/Steve \&amp\; Cat/)
+    @contact.to_request.should match(/29/)
+  end
+end
+
+describe "Debugging" do
+  before do
+    Solve360.debug
+  end
+  
+  it "should enable debugging on all requests" do
+    Solve360::Contact.default_options[:debug_output].should_not be_nil
   end
 end

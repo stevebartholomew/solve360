@@ -9,6 +9,11 @@ require "cgi"
 end
 
 module Solve360
+  def self.debug
+    Company.debug_output
+    Contact.debug_output    
+  end
+  
   class SaveFailure < Exception
   end
 end
