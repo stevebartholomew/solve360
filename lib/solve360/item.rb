@@ -75,7 +75,7 @@ module Solve360
     def to_request
       xml = "<request>"
       
-      xml << map_human_fields.collect {|key, value| "<#{key}>#{value}</#{key}>"}.join("")
+      xml << map_human_fields.collect {|key, value| "<#{key}>#{CGI.escapeHTML(value)}</#{key}>"}.join("")
       
       if related_items_to_add.size > 0
         xml << "<relateditems>"

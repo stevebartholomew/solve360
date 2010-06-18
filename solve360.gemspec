@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{solve360}
-  s.version = "0.0.7"
+  s.version = "0.0.9"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Stephen Bartholomew"]
-  s.date = %q{2010-02-04}
+  s.date = %q{2010-06-18}
   s.description = %q{}
   s.email = %q{Stephen Bartholomew}
   s.extra_rdoc_files = [
@@ -32,8 +32,8 @@ Gem::Specification.new do |s|
      "spec/fixtures/contacts/find-company-success.json",
      "spec/fixtures/contacts/find-success.json",
      "spec/fixtures/contacts/index.json",
+     "spec/fixtures/contacts/save-failed.json",
      "spec/fixtures/contacts/show-success.json",
-     "spec/fixtures/contacts/update-failed.json",
      "spec/fixtures/contacts/update-success.json",
      "spec/solve360/item_spec.rb",
      "spec/spec.opts",
@@ -42,7 +42,7 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://github.com/curve21/solve360}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.5}
+  s.rubygems_version = %q{1.3.6}
   s.summary = %q{Libary for working with the Solve360 CRM API}
   s.test_files = [
     "spec/solve360/item_spec.rb",

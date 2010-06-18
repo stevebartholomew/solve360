@@ -204,7 +204,6 @@ describe "Finding all records" do
   end
   
   it "should contain all contacts" do
-    puts @contacts.inspect
     @contacts.size.should == 2
     first = @contacts.first
     first.class.should == Solve360::Contact
@@ -223,5 +222,12 @@ describe "Handling errors" do
     lambda {
       @contact.save
     }.should raise_error(Solve360::SaveFailure)
+  end
+end
+
+describe "CGI Converting values" do
+  it "should convert html entities" do
+    @contact = Solve360::Contact.new(:fields => {"First Name" => "Steve & Cat"})
+    @contact.to_request.should match(/Steve \&amp\; Cat/)
   end
 end
